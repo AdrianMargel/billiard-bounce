@@ -22,7 +22,7 @@ class Triangle{
 		let lineIdx=0;
 		let ang=-rayAng;
 		let pos=this.corners[1].cln().sub(Vec(x,0)).rot(-rayAng);
-		let anchor=this.corners[0].sub(Vec(x,0)).rot(-rayAng);
+		let anchor=this.corners[0].cln().sub(Vec(x,0)).rot(-rayAng);
 		let invert=false;
 
 		disp.noFill();

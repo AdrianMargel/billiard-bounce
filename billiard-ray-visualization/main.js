@@ -28,11 +28,12 @@ let frameAnim=animate((t)=>{
 	display.clear();
 	
 	triangle=new Triangle(display.transformInv(control.mousePos()));
-	triangle.drawTri(display,control);
 
 	let t1=abs((t*.5)%2-1);
 	let t2=abs((t*.1)%2-1);
 	triangle.drawRay(t1,(t2-.5)*PI,display,control);
+	
+	triangle.drawTri(display,control);
 	
 	control.resetDelta();
 },1,true).start();
